@@ -14,11 +14,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="200.0" minWidth="400.0" onKeyPressed="#onKeyPressed" prefHeight="840.0" prefWidth="1793.0" stylesheets="@../stylesheets/App.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ordner.controllers.MainController">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyPressed="#onKeyPressed" prefHeight="763.0" prefWidth="1250.0" stylesheets="@../stylesheets/App.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ordner.controllers.MainController">
    <center>
-      <SplitPane id="splitpane" dividerPositions="0.2047808764940239" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="853.0" prefWidth="2752.0" BorderPane.alignment="CENTER">
+      <SplitPane id="splitpane" dividerPositions="0.2047808764940239" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
         <items>
-            <ScrollPane id="scrollpane" fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="0.0" minHeight="10.0" minWidth="200.0" pannable="true" prefWidth="200.0">
+            <ScrollPane id="scrollpane" fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="200.0" pannable="true">
                <content>
                   <VBox id="sidebar" fx:id="sidebar" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                      <children>
@@ -92,7 +92,7 @@
       </SplitPane>
    </center>
    <bottom>
-      <HBox id="toolbar" fx:id="toolbar" alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="1063.0" BorderPane.alignment="CENTER_LEFT">
+      <HBox id="toolbar" fx:id="toolbar" alignment="CENTER_LEFT" minHeight="33.0" prefHeight="33.0" BorderPane.alignment="CENTER_LEFT">
          <children>
             <Button mnemonicParsing="false" onAction="#mainMenuButtonAction" text="Main Menu">
                <HBox.margin>
