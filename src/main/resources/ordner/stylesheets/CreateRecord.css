@@ -1,0 +1,20 @@
+#createRecord {
+    -fx-background-color: #3b113d;
+}
+
+#mainArea {
+    -fx-background-color: #202123;
+}
+
+.combo-box, .combo-box .list-cell {
+    -fx-background-color: #111111;
+    -fx-border-color: #111111;
+}
+
+.combo-box-popup .list-view * {
+    -fx-padding: 0;
+}
+
+.text-field, .text-input {
+    -fx-background-color: #111111;
+}

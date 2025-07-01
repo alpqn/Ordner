@@ -1,0 +1,31 @@
+#templateInfo, #templateInfoTitle {
+    -fx-background-color: #103331;
+}
+
+#membersTableView  {
+    -fx-background-color: #111111;
+    -fx-font-size: 20;
+}
+
+#deleteTemplateButton {
+    -fx-background-color: "darkred";
+}
+
+.table-view {
+    -fx-background-color: #202123;
+}
+
+.table-view .table-column {
+    -fx-alignment: CENTER;
+    -fx-background-color: #111111;
+}
+
+.table-view .column-header,
+.table-view .cell {
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+}
+
+.label {
+    -fx-alignment: CENTER;
+}

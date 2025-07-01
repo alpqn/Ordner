@@ -1,0 +1,113 @@
+.root * {
+    -fx-text-fill: #bbbbbb;
+}
+
+#toolbar {
+    -fx-background-color: #202123;
+}
+
+#recentRecordsVBox {
+    -fx-background-color: #202123;
+}
+
+#recentRecordsVBox .label {
+    -fx-font-size: 26;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+}
+
+#recentRecordsVBox HBox,
+#recentRecordsVBox .button {
+    -fx-alignment: CENTER;
+}
+
+#recentRecordsVBox .button {
+    -fx-font-size: 20;
+    -fx-background-radius: 25;
+    -fx-text-alignment: CENTER;
+}
+
+#recentRecordsVBox .button:hover {
+    -fx-font-weight: bold;
+}
+
+#home {
+    -fx-background-color: #112333;
+}
+
+.button {
+    -fx-background-color: #111111;
+}
+
+.combo-box, .text-field, .text-input {
+    -fx-font-size: 20;
+}
+
+#sidebar .button {
+    -fx-font-size: 20;
+    -fx-background-color: #202123;
+}
+
+.context-menu {
+    -fx-background-color: #202123;
+}
+
+#sidebar .button:hover {
+    -fx-font-weight: bold;
+}
+
+#sidebar {
+    -fx-font-size: 18;
+    -fx-background-color: #202123;
+}
+
+#sidebar .label {
+    -fx-padding: 10 0 10 0;
+}
+
+.sidebarTitle {
+    -fx-font-size: 30;
+    -fx-background-color: #131314;
+    -fx-font-weight: bold;
+    -fx-background-radius: 30;
+}
+
+.button:hover {
+    -fx-cursor: hand;
+}
+
+.scroll-pane {
+    -fx-background-color: #202123;
+}
+
+#scrollpane {
+    -fx-max-width: 600;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #2a282d;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar .track {
+    -fx-background-color: #202123;
+}
+
+#splitpane, .split-pane-divider {
+    -fx-background-color: #202123;
+}
+
+.combo-box .list-cell:hover {
+    -fx-font-weight: bold;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-padding: 0;
+    -fx-pref-height: 0;
+}

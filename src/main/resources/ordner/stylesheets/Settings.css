@@ -1,0 +1,45 @@
+#settingsPage {
+    -fx-background-color: #35468c;
+}
+
+.combo-box, .combo-box .list-cell {
+    -fx-font-size: 15;
+    -fx-background-color: #111111;
+}
+
+.combo-box-popup .list-view  * {
+    -fx-padding: 0;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: #111111;
+    -fx-padding: 0 2 0 2;
+}
+
+.spinner .increment-arrow-button *,
+.spinner .decrement-arrow-button * {
+    -fx-background-color: "darkgrey";
+}
+
+.spinner .text-field {
+    -fx-background-color: #111111;
+    -fx-font-size: 15;
+}
+
+.spinner {
+    -fx-focus-color: transparent;
+}
+
+.color-picker * {
+    -fx-background-color: #111111;
+}
+
+.scroll-pane {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+#settingsVBox {
+    -fx-background-color: #202123;
+}

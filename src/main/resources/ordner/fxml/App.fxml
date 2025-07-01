@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="200.0" minWidth="400.0" onKeyPressed="#onKeyPressed" prefHeight="840.0" prefWidth="1793.0" stylesheets="@../stylesheets/App.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ordner.controllers.MainController">
+   <center>
+      <SplitPane id="splitpane" dividerPositions="0.2047808764940239" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="853.0" prefWidth="2752.0" BorderPane.alignment="CENTER">
+        <items>
+            <ScrollPane id="scrollpane" fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="0.0" minHeight="10.0" minWidth="200.0" pannable="true" prefWidth="200.0">
+               <content>
+                  <VBox id="sidebar" fx:id="sidebar" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="sidebarTitle" text="Records">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <VBox id="recordsVBox" fx:id="recordsVBox" alignment="CENTER" maxWidth="1.7976931348623157E308" VBox.vgrow="NEVER">
+                           <children>
+                              <Label fx:id="noRecordLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" text="No records found." VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font></Label>
+                           </children></VBox>
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="254.0" styleClass="sidebarTitle" text="Templates">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <VBox id="templatesVBox" fx:id="templatesVBox" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="1.0" prefWidth="345.0" VBox.vgrow="NEVER">
+                           <children>
+                              <Label fx:id="noTemplateLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" text="No templates found." VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font></Label>
+                           </children></VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <StackPane fx:id="mainStack">
+               <children>
+                  <fx:include fx:id="createTemplate" source="CreateTemplate.fxml" />
+                  <fx:include fx:id="createRecord" source="CreateRecord.fxml" />
+                  <fx:include fx:id="templateInfo" source="TemplateInfo.fxml" />
+                  <fx:include fx:id="recordTable" source="RecordTable.fxml" />
+                  <fx:include fx:id="settings" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="Settings.fxml" />
+                  <GridPane id="home" fx:id="home" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Recently Opened Records" textOverrun="CLIP" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="45.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <VBox id="recentRecordsVBox" fx:id="recentRecordsVBox" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="noRecentRecordsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="279.0" text="No recent records found." VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold Italic" size="20.0" />
+                                 </font></Label>
+                           </children></VBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </StackPane>
+        </items>
+      </SplitPane>
+   </center>
+   <bottom>
+      <HBox id="toolbar" fx:id="toolbar" alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="1063.0" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <Button mnemonicParsing="false" onAction="#mainMenuButtonAction" text="Main Menu">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="editSettingsButton" alignment="CENTER" mnemonicParsing="false" onAction="#editSettingsButtonAction" style="-fx-background-color: #111111;" text="Settings">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="newTemplateButton" mnemonicParsing="false" onAction="#newTemplateButtonAction" text="New Template">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#newRecordButtonAction" text="New Record">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

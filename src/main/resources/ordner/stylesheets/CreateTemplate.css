@@ -1,0 +1,44 @@
+.label {
+    -fx-alignment: CENTER;
+}
+
+#createTemplate, #createTemplateTitle {
+    -fx-background-color: #103331;
+}
+
+#createTemplate .button {
+    -fx-background-color: #111111;
+}
+
+.combo-box, .combo-box .list-cell {
+    -fx-background-color: #111111;
+}
+
+#membersTableView * {
+    -fx-background-color: #111111;
+    -fx-font-size: 20;
+}
+
+.table-view {
+    -fx-background-color: #202123;
+}
+
+.table-view .table-column {
+    -fx-alignment: CENTER;
+}
+
+.table-view .column-header,
+.table-view .cell {
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.text-field, .text-input {
+    -fx-background-color: #111111;
+}
+

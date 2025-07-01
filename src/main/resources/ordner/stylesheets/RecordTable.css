@@ -1,0 +1,66 @@
+#recordTable {
+    -fx-background-color: #220823;
+}
+
+.table-view {
+    -fx-background-color: #111111;
+}
+
+.table-view .table-column {
+    -fx-alignment: CENTER;
+}
+
+#addRowHBox .text-field {
+    -fx-prompt-text-fill: #bbbbbbbb;
+}
+
+.table-view .column-header {
+    -fx-font-size: 20;
+}
+
+.table-view .cell {
+    -fx-font-size: 20;
+}
+
+.table-view .column-header:last-visible {
+    -fx-border-width: 0;
+}
+
+.table-cell:last-visible {
+    -fx-border-width: 0;
+}
+
+.table-view .table-row-cell:selected:focused {
+    -fx-background-color: #220823;
+    -fx-table-cell-border-color: transparent;
+}
+
+#deleteRecordButton {
+    -fx-graphic: url("../icons/trashcan.png");
+    -fx-background-color: "darkred";
+}
+
+#deleteRecordButton .image-view {
+    -fx-fit-width: 16;
+    -fx-fit-height: 18;
+}
+
+.text-field {
+    -fx-background-color: #1d1d21;
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: #2e3033;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #202124;
+}
+
+.table-view .column-header, .show-hide-columns-button {
+    -fx-background-color: #111111;
+}
+
+.show-hide-columns-button > * {
+    -fx-background-color: "white";
+}
