@@ -194,7 +194,7 @@ public class RecordTableController
 		{
 			validatedString = switch(columnType)
 			{
-				case TEXT -> inputSimplified.matches("^[A-Za-z_][\\w\\s]*") ? inputSimplified : null;
+				case TEXT -> inputSimplified;
 				case REAL ->
 				{
 					var parsedStr = String.valueOf(Double.parseDouble(inputSimplified));

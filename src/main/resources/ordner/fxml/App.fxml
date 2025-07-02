@@ -18,7 +18,7 @@
    <center>
       <SplitPane id="splitpane" dividerPositions="0.2047808764940239" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
         <items>
-            <ScrollPane id="scrollpane" fitToHeight="true" fitToWidth="true" maxWidth="1.7976931348623157E308" minWidth="-Infinity" pannable="true" prefWidth="350.0" SplitPane.resizableWithParent="false">
+            <ScrollPane id="scrollpane" fitToHeight="true" fitToWidth="true" maxWidth="1.7976931348623157E308" minWidth="200.0" pannable="true" prefWidth="250.0" SplitPane.resizableWithParent="false">
                <content>
                   <VBox id="sidebar" fx:id="sidebar" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308">
                      <children>
