@@ -57,7 +57,7 @@ public class CreateTemplateController
 		else if(getAllAddedMembersFormatted().stream().anyMatch(member -> member.name().equals(memberName)))
 		{ MainController.showError("A member named \"" + memberName + "\" already exists.", 5000); return; }
 
-		members.add(FXCollections.observableArrayList(memberName, typeComboBox.getValue()));
+		members.add(FXCollections.observableArrayList(typeComboBox.getValue(), memberName));
 		memberNameTextField.clear();
 	}
 
