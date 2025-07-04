@@ -22,7 +22,7 @@ And run:
 ```
 (Use gradlew.bat for Windows)
 #### Download
-After downloading and decompressing the `.zip` file from the `Releases` section, naviage to `bin` and run `ordner`.
+After downloading and decompressing the `.zip` file from the `Releases` section, navigate to `bin` and run `ordner`.
 
 ## Create a Template
 1. Navigate to `New Template` in the status bar.
