@@ -27,7 +27,7 @@ And run:
     1. Select a type (Type of input for this member, e.g. `Integer`).
     2. Set a name (Equivalent to a column name).
 
-![2025-07-03-175239_1920x1080_scrot](https://github.com/user-attachments/assets/c71356ee-854a-43df-968a-4ec9179d2779)
+![Create a Template](https://github.com/user-attachments/assets/c71356ee-854a-43df-968a-4ec9179d2779)
 
 ## Create a Record
 1. Navigate to `New Record` in the status bar.

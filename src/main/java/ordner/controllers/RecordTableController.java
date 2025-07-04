@@ -224,10 +224,10 @@ public class RecordTableController
 		{
 			if(Records.removeRecord(recordName))
 			{
-				MainController.showMessage("Record \"" + recordName + "\" has been removed successfully.", 5000, "green");
+				MainController.showMessage("Record \"" + recordName + "\" has been deleted successfully.", 5000, "green");
 				mainController.showPage("home");
 			}
-			else { MainController.showError("An error occurred while removing the record.", 5000); }
+			else { MainController.showError("An error occurred while deleting the record.", 5000); }
 		}
 		else
 		{
