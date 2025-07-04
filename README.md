@@ -11,6 +11,7 @@
 - [Create a Record](#create-a-record)
 - [Managing Records](#managing-records)
 # Installation
+#### Compile
 Build with Java 24+ after cloning the repository
 ```bash
 ./gradlew build
@@ -20,6 +21,9 @@ And run:
 ./gradlew run
 ```
 (Use gradlew.bat for Windows)
+#### Download
+After downloading and decompressing the `.zip` file from the `Releases` section, run `bin/ordner`.
+
 ## Create a Template
 1. Navigate to `New Template` in the status bar.
 2. Set a template name (e.g. `Runs`).
