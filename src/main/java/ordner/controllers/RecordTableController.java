@@ -21,6 +21,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Priority;
 
+import java.io.File;
+import java.net.MalformedURLException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -49,6 +51,8 @@ public class RecordTableController
 
 	@FXML private void initialize()
 	{
+		try { recordTableView.getStylesheets().add(new File("userPrefs.css").toURI().toURL().toExternalForm()); }
+		catch(MalformedURLException e) { System.err.println("Cannot get userPrefs.css"); }
 		rowNumberLabel.textProperty().bind(Bindings
 				.when(recordTableView.getSelectionModel().selectedIndexProperty().greaterThan(-1)) // If a row is selected
 					.then(Bindings.format("%d:%d rows", recordTableView.getSelectionModel().selectedIndexProperty().add(1), Bindings.size(recordData)))

@@ -28,7 +28,7 @@ public class SettingsController
 	@FXML private ComboBox<Pos> cellTextAlignmentComboBox;
 	@FXML private ComboBox<String> fontComboBox;
 	@FXML private Spinner<Integer> fontSpinner;
-	private final String cssLocation = "src/main/resources/ordner/stylesheets/userPrefs.css";
+	private final String cssConf = "userPrefs.css";
 	private boolean confirmationFlag = false;
 
 	public void setMainController(MainController controller) { mainController = controller; }
@@ -39,13 +39,12 @@ public class SettingsController
 		fontComboBox.setItems(FXCollections.observableArrayList(Font.getFamilies()));
 		fontSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1,96));
 
-		var filePath = Path.of(cssLocation);
-		if(Files.exists(filePath))
+		if(Files.exists(Path.of(cssConf)))
 		{
 			try
 			{
 				Function<String, Color> parseHex = (str) -> Color.valueOf(str.substring(str.indexOf('#'), str.indexOf(';')));
-				String content = Files.readString(filePath);
+				String content = Files.readString(Path.of(cssConf));
 				for(var line : content.split("\n"))
 				{
 					if(line.startsWith(".table-view .table-row-cell:odd {")) { oddRowColorPicker.setValue(parseHex.apply(line)); }
@@ -82,15 +81,15 @@ public class SettingsController
 			,evenRowColorPicker.getValue().toString().substring(2, 8)
 			,selectedRowColorPicker.getValue().toString().substring(2, 8)
 			,cellEditFieldColorPicker.getValue().toString().substring(2, 8)
-			,fontComboBox.getValue()
+			,(fontComboBox.getValue() == null ? Font.getDefault().getFamily() : fontComboBox.getValue())
 			,fontSpinner.getValue()
 			,cellTextColorPicker.getValue().toString().substring(2, 8)
-			,cellTextAlignmentComboBox.getValue().toString());
+			,(cellTextAlignmentComboBox.getValue() == null ? Pos.CENTER : cellTextAlignmentComboBox.getValue()));
 
-		try { Files.writeString(Path.of(cssLocation), cssContent); }
+		try { Files.writeString(Path.of(cssConf), cssContent); }
 		catch(IOException e)
 		{
-			System.err.println("Cannot create " + cssLocation + " " + e);
+			System.err.println("Cannot create " + cssConf + " " + e);
 			MainController.showError("An error occurred while updating settings.", 5000);
 			return;
 		}
@@ -102,10 +101,10 @@ public class SettingsController
 	{
 		if(confirmationFlag)
 		{
-			try { Files.deleteIfExists(Path.of(cssLocation)); }
+			try { Files.deleteIfExists(Path.of(cssConf)); }
 			catch(IOException e)
 			{
-				System.err.println("Couldn't delete " + cssLocation + " " + e);
+				System.err.println("Couldn't delete " + cssConf + " " + e);
 				MainController.showError("An error occurred while resetting to defaults.", 5000);
 				return;
 			}

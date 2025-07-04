@@ -1,10 +1,8 @@
 module ordner {
 	requires javafx.controls;
 	requires javafx.fxml;
-	requires java.desktop;
-	requires java.compiler;
 	requires java.sql;
-	requires jdk.jshell;
+	requires org.xerial.sqlitejdbc;
 
 
 	opens ordner to javafx.fxml;
