@@ -90,7 +90,7 @@ public class CreateTemplateController
 	{
 		var values = new ArrayList<TemplateMember>();
 
-		for(var val : members) { values.add(new TemplateMember(val.getFirst(), TemplateMemberType.fromDisplayType(val.getLast()))); }
+		for(var val : members) { values.add(new TemplateMember(val.getLast(), TemplateMemberType.fromDisplayType(val.getFirst()))); }
 
 		return values;
 	}
