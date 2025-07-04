@@ -13,8 +13,6 @@ repositories {
     mavenCentral()
 }
 
-val junitVersion = "5.10.2"
-
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(24)
