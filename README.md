@@ -28,19 +28,19 @@ After downloading and decompressing the `.zip` file from the `Releases` section,
 1. Navigate to `New Template` in the status bar.
 2. Set a template name (e.g. `Runs`).
 3. Add members.
-    1. Select a type (Type of input for this member, e.g. `Integer`).
-    2. Set a name (Equivalent to a column name).
+    1. Select a type (type of input for this member, e.g. `Integer`).
+    2. Set a name (equivalent to a column name).
 
 ![Create a Template](https://github.com/user-attachments/assets/c71356ee-854a-43df-968a-4ec9179d2779)
 
 ## Create a Record
 1. Navigate to `New Record` in the status bar.
 2. Set a record name (e.g. `Germany_Marathons`).
-3. Choose a template (The record will conform to it and create fields accordingly. Let's choose the `Runs` template we created).
+3. Choose a template (the record will conform to it and create fields accordingly. Let's choose the `Runs` template we created).
 
 ![Create a Record](https://github.com/user-attachments/assets/0752b8e3-a12d-4c9a-ab05-43f239917bfc)
 ## Managing Records
-- To add a new row, fill in all the text fields and hit `Add Row` (Make sure your input is valid for the field).
+- To add a new row, fill in all the text fields and hit `Add Row` (make sure your input is valid for the field).
 - You can edit single cells by double-clicking.
 - You can resize the width of each column by dragging the column names at the top.
 - You can sort the data by clicking on a column name.
