@@ -63,7 +63,7 @@ public class SettingsController
 					}
 				}
 			}
-			catch(IOException e) { System.err.println("Cannot read userPrefs.css " + e); }
+			catch(IOException e) { System.err.println("Couldn't read userPrefs.css " + e); }
 		}
 	}
 
@@ -89,7 +89,7 @@ public class SettingsController
 		try { Files.writeString(Path.of(cssConf), cssContent); }
 		catch(IOException e)
 		{
-			System.err.println("Cannot create " + cssConf + " " + e);
+			System.err.println("Couldn't create " + cssConf + " " + e);
 			MainController.showError("An error occurred while updating settings.", 5000);
 			return;
 		}

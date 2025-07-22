@@ -52,7 +52,7 @@ public class RecordTableController
 	@FXML private void initialize()
 	{
 		try { recordTableView.getStylesheets().add(new File("userPrefs.css").toURI().toURL().toExternalForm()); }
-		catch(MalformedURLException e) { System.err.println("Cannot get userPrefs.css"); }
+		catch(MalformedURLException e) { System.err.println("Couldn't get userPrefs.css"); }
 		rowNumberLabel.textProperty().bind(Bindings
 				.when(recordTableView.getSelectionModel().selectedIndexProperty().greaterThan(-1)) // If a row is selected
 					.then(Bindings.format("%d:%d rows", recordTableView.getSelectionModel().selectedIndexProperty().add(1), Bindings.size(recordData)))
@@ -74,7 +74,7 @@ public class RecordTableController
 		this.recordName = recordName;
 
 		try { dbConnection = DriverManager.getConnection("jdbc:sqlite:records/" + recordName + ".db"); }
-		catch(SQLException e) { System.err.println("Cannot get connection to the database SQL ERROR: " + e); }
+		catch(SQLException e) { System.err.println("Couldn't get connection to the database SQL ERROR: " + e); }
 
 		try(Statement statement = dbConnection.createStatement())
 		{
@@ -85,7 +85,7 @@ public class RecordTableController
 			if(tableName == null) { throw new SQLException("Table name is null"); }
 			templateName = tableName;
 
-			var data = statement.executeQuery("SELECT * FROM " + tableName);
+			var data = statement.executeQuery("SELECT * FROM \"" + tableName + "\"");
 			var columnCount = data.getMetaData().getColumnCount();
 
 			for(int i = 1; i <= columnCount; ++i) // Create columns
@@ -108,7 +108,7 @@ public class RecordTableController
 				recordData.add(row);
 			}
 		}
-		catch(SQLException e) { System.err.println("Cannot get record" + recordName + " SQL ERROR: " + e); }
+		catch(SQLException e) { System.err.println("Couldn't get record " + recordName + " SQL ERROR: " + e); }
 
 		recordNameLabel.setText(recordName + " (" + templateName + ')');
 		for(var val : recordTableView.getColumns()) // Make every column have the same width at the start
@@ -178,7 +178,7 @@ public class RecordTableController
 	private void cleanUp()
 	{
 		try{ if(dbConnection != null && !dbConnection.isClosed()){ dbConnection.close(); } }
-		catch(SQLException e) { System.err.println("Cannot close database connection SQL ERROR: " + e); }
+		catch(SQLException e) { System.err.println("Couldn't close database connection SQL ERROR: " + e); }
 		recordData.clear();
 		recordTableView.getColumns().clear();
 		addRowHBox.getChildren().clear();
